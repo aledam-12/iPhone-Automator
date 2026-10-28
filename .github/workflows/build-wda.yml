@@ -40,7 +40,7 @@ jobs:
           mkdir -p Payload
           cp -R "$APP_PATH" Payload/
           find Payload -type d -name '*.dSYM' -prune -exec rm -rf {} +
-          zip -r WebDriverAgent.ipa Payload > /dev/null
+          zip -r -D WebDriverAgent.ipa Payload > /dev/null
           echo "Created WebDriverAgent.ipa"
 
       - name: Upload the .ipa artifact
